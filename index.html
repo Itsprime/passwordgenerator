@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Roboto&display=swap" rel="stylesheet">
+
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="scripts" href="script.js">
+</head>
+
+<body>
+    <div class="container">
+        <h2 class="title">Password Generator</h2>
+        <div class="result">
+            <div class="result__viewbox" id="result">RANDOM PASSWORD</div>
+        </div>
+        <form>
+            <div class="range">
+                <label for="characterAmountNumber">Number of Characters</label>
+                <input type="range" min="1" max="50" value="10" id="characterAmountRange">
+                <input type="number" min="1" max="50" value="10" id="characterAmountRange">
+            </div>
+
+            <span id="settings">settings</span>
+            <div class="settings">
+                <div class="setting">
+                    <input type="checkbox" id="uppercase" checked />
+                    <label for="uppercase">Include Uppercase</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="lowercase" checked />
+                    <label for="lowercase">Include Lowercase</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="number" checked />
+                    <label for="number">Include Numbers</label>
+                </div>
+                <div class="setting">
+                    <input type="checkbox" id="symbol" />
+                    <label for="symbol">Include Symbols</label>
+                </div>
+            </div>
+        </form>
+
+        <button class="btn generate" id="generate">Generate Password</button>
+
+    </div>
+</body>
+
+</html>
