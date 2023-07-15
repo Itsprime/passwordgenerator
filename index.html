@@ -7,23 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&family=Roboto&display=swap" rel="stylesheet">
-
-    <title>Password Generator</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="scripts" href="script.js">
+    <script src="script.js" defer></script>
+    <title>Password Generator</title>
 </head>
 
 <body>
     <div class="container">
         <h2 class="title">Password Generator</h2>
         <div class="result">
-            <div class="result__viewbox" id="result">RANDOM PASSWORD</div>
+            <div class="password">RANDOM PASSWORD</div>
         </div>
-        <form>
+        <form class="passwordGeneratorForm">
             <div class="range">
                 <label for="characterAmountNumber">Number of Characters</label>
                 <input type="range" min="1" max="50" value="10" id="characterAmountRange">
-                <input type="number" min="1" max="50" value="10" id="characterAmountRange">
+                <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
             </div>
 
             <span id="settings">settings</span>
