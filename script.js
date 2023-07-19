@@ -20,10 +20,10 @@ function syncCharacterAmount(e) {
 form.addEventListener('submit', e => {
     e.preventDefault()
     const character_range = characterAmountNumber.value
-    const includeLowercase = includeLowercaseElement.value
-    const includeUppercase = includeUppercaseElement.value
-    const includeNumbers = includeNumberElement.value
-    const includeSymbols = includeSymbolElement.value
+    const includeLowercase = includeLowercaseElement.checked
+    const includeUppercase = includeUppercaseElement.checked
+    const includeNumbers = includeNumberElement.checked
+    const includeSymbols = includeSymbolElement.checked
     const password = createPassword(includeLowercase, includeNumbers, includeSymbols, includeUppercase, character_range)
     passwordElement.innerText = password
 })
@@ -31,7 +31,7 @@ form.addEventListener('submit', e => {
 const LOWERCASE_CHAR_CODE = generateCharCode(97, 122)
 const UPPERCASE_CHAR_CODE = generateCharCode(65, 90)
 const NUMBER_CHAR_CODE = generateCharCode(48, 57)
-const SYMBOL_CHAR_CODE = generateCharCode(33, 47).concat(generateCharCode(58, 126))
+const SYMBOL_CHAR_CODE = generateCharCode(33, 47).concat(generateCharCode(58, 64)).concat(generateCharCode(91, 96)).concat(generateCharCode(123, 126))
 console.log(SYMBOL_CHAR_CODE)
 
 function generateCharCode(low, high) {
@@ -48,6 +48,7 @@ function createPassword(includeLowercase, includeNumber, includeSymbols, include
     if (includeUppercase) passwordCreated = passwordCreated.concat(UPPERCASE_CHAR_CODE)
     if (includeNumber) passwordCreated = passwordCreated.concat(NUMBER_CHAR_CODE)
     if (includeSymbols) passwordCreated = passwordCreated.concat(SYMBOL_CHAR_CODE)
+
     console.log("working" + passwordCreated)
     const passwordCharacters = []
     for (let i = 0; i < character_range; i++) {
