@@ -35,7 +35,10 @@ body {
   display: flex;
   justify-content: center;
   position: relative;
+  word-break: break-all;
   align-items: center;
+  padding-left: 4%;
+  padding-right: 4%;
   /* padding: 6%;
   text-align: center; */
   width: 100%;

@@ -16,13 +16,13 @@
     <div class="container">
         <h2 class="title">Password Generator</h2>
         <div class="result">
-            <div class="password">RANDOM PASSWORD</div>
+            <div class="password-display" id="password">RANDOM PASSWORD</div>
         </div>
-        <form class="passwordGeneratorForm">
+        <form class="form" id="passwordGeneratorForm">
             <div class="range">
                 <label for="characterAmountNumber">Number of Characters</label>
-                <input type="range" min="1" max="50" value="10" id="characterAmountRange">
-                <input class="number-input" type="number" min="1" max="50" value="10" id="characterAmountNumber">
+                <input type="range" min="1" max="50" value="16" id="characterAmountRange">
+                <input class="number-input" type="number" min="1" max="50" value="16" id="characterAmountNumber">
             </div>
 
             <span id="settings">settings</span>
@@ -44,10 +44,9 @@
                     <label for="symbol">Include Symbols</label>
                 </div>
             </div>
+
+            <button class="btn generate" id="generate">Generate Password</button>
         </form>
-
-        <button class="btn generate" id="generate">Generate Password</button>
-
     </div>
 </body>
 
