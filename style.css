@@ -19,7 +19,7 @@ body {
 .container {
   margin: 40px 0;
   width: 400px;
-  height: 600px;
+  /* height: 600px; */
   border-radius: 10px;
   background: #183A37;
   padding: 10px 20px;
@@ -34,8 +34,11 @@ footer {
   width: 100%;
   text-align: center;
   width: auto;
-  background-color: #02589b;
-  margin-top: 5%;
+  background-color: #183A37;
+  color: #EFD6AC;
+  border-radius: 10px;
+  padding-top: 12px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.45), 0 4px 8px rgba(0, 0, 0, 0.35), 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
 /* .container:after {
